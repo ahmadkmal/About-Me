@@ -1,0 +1,45 @@
+body{
+    background: beige;
+    color: rgb(1, 1, 78);
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 25px;
+}
+header{
+    background: black;
+    color: blanchedalmond;
+}
+header h1{
+    padding: 15px 5px 5px 20px;
+    font-size: 30px;
+    text-align: left;
+}
+main{
+    font-family: "Times New Roman", Times, serif;
+    padding: 100px 30px 30px 20px;
+    font-size: large;
+    font: -webkit-xxx-large;
+}
+img {
+    height: 100px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+footer {
+    font: -webkit-xxx-large;
+    text-align: center;
+    background: gray;
+    color:honeydew ;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+footer p {
+    padding: 10px;
+
+}
+h4{
+    background: rgba(255, 0, 0, 0.479);
+    padding: 3px 0px 3px 25px ;
+}

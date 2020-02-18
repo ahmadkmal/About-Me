@@ -110,5 +110,6 @@ for(var c = 0; c <6 ; c++){
   }
 
 }
+alert('what i like is '+ favFoods);
 alert('thank you '+userName+' to play this game . your scoure is ('+correctAnswer+'/7)')
 

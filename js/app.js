@@ -78,12 +78,13 @@ for(var i = 0 ; i <4 ; i++){
     correctAnswer++;
     break;
   }
-  if(countryVisted<9)
+  console.log(Number(countryVisted));
+  if(Number(countryVisted) < 9)
   {
     alert('too low');
 
   }else{
-    alert('too low');
+    alert('too high');
   }
 
 }

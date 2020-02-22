@@ -37,7 +37,6 @@ if (ardans === 'y' || ardans === 'yes') {
   alert('your answer was worng :( I can');
   whatToPrint = '<p> can i programe arduino  ? </P><br> <p> your answer : </p> <p style="color:red;">' + ardans + '</p>';
 }
-ageQuestion();
 
 document.write(whatToPrint);
 var burans = prompt(' do I looooooove burger ').toLowerCase();
@@ -51,7 +50,6 @@ if (burans === 'y' || burans === 'yes') {
   alert('your answer was worng :( I loooooove it');
   whatToPrint = '<p>  do I looooooove burger ? </P><br> <p> your answer : </p> <p style="color:green;">' + burans + '</p>';
 }
-aiQuestion();
 
 document.write(whatToPrint);
 var sweet = prompt(' do i like sweet ').toLowerCase();
@@ -65,52 +63,26 @@ if (sweet === 'n' || sweet === 'no') {
   alert('your answer was worng :( I dont like it');
   whatToPrint = '<p> do i like sweet ? </P><br> <p> your answer : </p> <p style="color:red;">' + sweet + '</p>';
 }
-arduinoQuestion();
+document.write(whatToPrint);
+var userName = prompt(' what is your name ').toLowerCase();
+alert('welcome to my page ' + userName);
+whatToPrint = '<p> how much country i have been visited ? </P><br> <p> your answer : </p> >';
+for (var i = 0; i < 4; i++) {
+  var countryVisted = prompt(' how much country i have been visited  ');
 
-function burgerQuestion() {
-
-  var burans = prompt(' do I looooooove burger ').toLowerCase();
-
-
-  if (burans === 'y' || burans === 'yes') {
-    alert('your answer was right :)I loooove it');
+  if (Number(countryVisted) === 9) {
     correctAnswer++;
-    whatToPrint = '<p>  do I looooooove burger ? </P><br> <p> your answer : </p> <p style="color:green;">' + burans + '</p>';
-  } else {
-    alert('your answer was worng :( I loooooove it');
-    whatToPrint = '<p>  do I looooooove burger ? </P><br> <p> your answer : </p> <p style="color:green;">' + burans + '</p>';
+    whatToPrint = whatToPrint + '<br>  <p style="color:green;">' + countryVisted + '</p>';
+    break;
   }
   whatToPrint = whatToPrint + ' <br>  <p style="color:red;">' + countryVisted + '</p>';
-
   if (Number(countryVisted) < 9) {
     alert('too low');
 
-  document.write(whatToPrint);
-}
-burgerQuestion();
-
-function sweetsQuestion() {
-
-  var sweet = prompt(' do i like sweet ').toLowerCase();
-
-
-  if (sweet === 'n' || sweet === 'no') {
-    alert('your answer was right :) I dont like it');
-    correctAnswer++;
-    whatToPrint = '<p> do i like sweet ? </P><br> <p> your answer : </p> <p style="color:green;">' + sweet + '</p>';
   } else {
-    alert('your answer was worng :( I dont like it');
-    whatToPrint = '<p> do i like sweet ? </P><br> <p> your answer : </p> <p style="color:red;">' + sweet + '</p>';
+    alert('too high');
   }
-  document.write(whatToPrint);
-}
-sweetsQuestion();
 
-function nameRequest() {
-  userName = prompt(' what is your name ').toLowerCase();
-  alert('welcome to my page ' + userName);
-  whatToPrint = '<p> how much country i have been visited ? </P><br> <p> your answer : </p> >';
-  return (userName);
 }
 document.write(whatToPrint);
 alert('the right answer is 9');
@@ -125,37 +97,16 @@ for (var c = 0; c < 6; c++) {
       arrCorrect = true;
       break;
     }
-
   }
-  document.write(whatToPrint);
-  alert('the right answer is 9');
-}
-travelQuestion();
-
-function foodQuestion() {
-
-  var favFoods = ['mansaf', 'shawirma', 'burger', 'steak'];
-  var arrCorrect = false;
-  whatToPrint = '<p> What\'s my fav food? ? </P><br> <p> your answer : </p> >';
-  for (var c = 0; c < 6; c++) {
-    var myFav = prompt('What\'s my fav food?').toLowerCase();
-    for (var j = 0; j < favFoods.length; j = j + 1) {
-      if (myFav === favFoods[j]) {
-        arrCorrect = true;
-        break;
-      } 
-    }
-    if (arrCorrect === true) {
-      whatToPrint = whatToPrint + '<br>  <p style="color:green;">' + myFav + '</p>';
-      correctAnswer++;
-      break;
-    }
-    whatToPrint = whatToPrint + '<br>  <p style="color:red;">' + myFav + '</p>';
-
+  if (arrCorrect === true) {
+    whatToPrint = whatToPrint + '<br>  <p style="color:green;">' + myFav + '</p>';
+    correctAnswer++;
+    break;
   }
-  document.write(whatToPrint + '<br>');
-  alert('what i like is ' + favFoods);
-}
-foodQuestion();
-alert('thank you ' + nameRequest() + ' to play this game . your scoure is (' + correctAnswer + '/7)');
+  whatToPrint = whatToPrint + '<br>  <p style="color:red;">' + myFav + '</p>';
 
+}
+document.write(whatToPrint + '<br>');
+alert('what i like is ' + favFoods);
+alert('thank you ' + userName + ' to play this game . your scoure is (' + correctAnswer + '/7)');
+document.write('<p> thank tou ' + userName + ' to play this game . your scoure is (' + correctAnswer + '/7) <p><br><br>');

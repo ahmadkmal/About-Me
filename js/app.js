@@ -110,3 +110,4 @@ document.write(whatToPrint + '<br>');
 alert('what i like is ' + favFoods);
 alert('thank you ' + userName + ' to play this game . your scoure is (' + correctAnswer + '/7)');
 document.write('<p> thank tou ' + userName + ' to play this game . your scoure is (' + correctAnswer + '/7) <p><br><br>');
+
